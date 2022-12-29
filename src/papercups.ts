@@ -60,7 +60,9 @@ export class Papercups {
     const websocketUrl = getWebsocketUrl(baseUrl);
 
     this.socket = new Socket(websocketUrl, {
-      params: {account_id: accountId, inbox_id: inboxId},
+      // TODO: change this to get on demain
+      // params: {account_id: accountId, inbox_id: inboxId},
+      params: {clientId: 'T03TF51756H', userId: 'test.userId'}
     });
   }
 

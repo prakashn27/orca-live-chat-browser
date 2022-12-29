@@ -2,7 +2,7 @@ import {Message} from './types';
 
 export function noop() {}
 
-export const DEFAULT_BASE_URL = 'https://app.papercups.io';
+export const DEFAULT_BASE_URL = 'https://8tycb5q9q3.execute-api.us-east-1.amazonaws.com/dev';
 
 export const isDev = (w: any) => {
   return Boolean(
@@ -22,7 +22,7 @@ export const getWebsocketUrl = (baseUrl = DEFAULT_BASE_URL) => {
   const isHttps = protocol === 'https';
 
   // TODO: not sure how websockets work with subdomains
-  return `${isHttps ? 'wss' : 'ws'}://${host}/socket`;
+  return `${isHttps ? 'wss' : 'ws'}://${host}`;
 };
 
 // TODO: handle this on the server instead
